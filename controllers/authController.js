@@ -2,7 +2,6 @@ const {isEmail}=require("validator")
 const bcrypt=require("bcrypt")
 const jwt=require("jsonwebtoken")
 const User=require("../models/usermodel")
-const Patient=require("../models/patientmodel")
 
 const createToken=(id)=>{
     const token=jwt.sign({id}, "boboyesecret", {expiresIn:3*24*60*60})
